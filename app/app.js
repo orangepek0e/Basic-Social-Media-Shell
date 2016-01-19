@@ -13,7 +13,7 @@
                .state('editProfile', {
                    url:"/edit-profile",
                    templateUrl: "app/profile/editProfileView.html",
-                   controller: "editProfileController"
+                   controller: "EditProfileController"
                })
 
        })
