@@ -9,6 +9,7 @@
 
         <script src="app/app.js"></script>
         <script src="app/signup/signup-controller.js"></script>
+        <script src="app/navigation/navController.js"></script>
 
     </head>
 
@@ -17,7 +18,7 @@
             <div>
                 <input type="text" ng-model="login.email">
                 <input type="password" ng-model="login.password">
-                <button>Login</button>
+                <button ng-click="logUserIn()">Login</button>
                 <a ui-sref="signUp">Create an Account</a>
             </div>
         </div>
