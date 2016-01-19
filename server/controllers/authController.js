@@ -8,7 +8,7 @@ module.exports.signup = function (req, res){
 }
 
 module.exports.login = function(req,res){
-    User.find(req.body, function(err, results){
+    Users.find(req.body, function(err, results){
         if(err){
             console.log("Error Out");
         }
