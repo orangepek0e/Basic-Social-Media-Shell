@@ -28,5 +28,33 @@
                 }
             };
 
+            $scope.updateUsername = function() {
+                var request = {
+                    userId: $scope.user._id,
+                    username: $scope.user.username
+                }
+
+                $http.post('api/profile/updateUsername', request).success(function(){
+                    console.log("user success");
+                }).error(function(error){
+                    console.log(error);
+                })
+            };
+
+            //We could have used a switch statement, but I wanted to get comfortable typing this code format.//
+
+            $scope.updateBio = function() {
+                var request = {
+                    userId: $scope.user._id,
+                    userBio: $scope.user.bio
+                }
+
+                $http.post('api/profile/updateBio', request).success(function(){
+                    console.log("bio success");
+                }).error(function(err){
+                    console.log(err);
+                })
+            };
+
         }]);
 }());

@@ -27,6 +27,8 @@ app.post('/api/user/login', authController.login);
 
 //Profile
 app.post('/api/profile/editPhoto', multipartMiddleware, profileController.updatePhoto);
+app.post('/api/profile/updateUsername', profileController.updateUsername);
+app.post('/api/profile/updateBio', profileController.updateBio);
 
 app.listen('3000', function(){
    console.log("The magic happens on port 3000");
